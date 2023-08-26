@@ -1,70 +1,151 @@
-* {
-  margin: 0;
-  padding: 0;
-}
+@import url("https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit&family=Tilt+Prism&display=swap");
 
 body {
   background-image: url(https://i.pinimg.com/564x/38/51/ac/3851ac8cf68319f3b3af1b9a4f0b12c1.jpg);
-  font-family: "Kanit", sans-serif;
+  font-family: "ADLaM Display", cursive;
+  overflow-x: hidden;
 }
 
 .container {
   background-color: rgba(255, 255, 255, 0.829);
   border-radius: 10%;
-  margin: auto;
-  height: 70vh;
-  width: 85%;
+  margin:  auto;
+  height: 80vh;
+  width: 70%;
   text-align: center;
   margin-top: 7%;
 }
 
-header {
+header h1 {
+  padding-top: 20px;
   font-family: "Tilt Prism", cursive;
   color: rgb(255, 0, 21);
-  font-size: 2em;
+  font-size: 4em;
 }
 
-h3 {
-  margin-top: 1%;
-}
-
-.choose {
-    margin-top: 5%;
+.let {
+  margin-top: 3%;
 }
 
 .moves {
-    border: none;
-    background-color: transparent;
-    font-size: 7em;
-    margin-right: 0.5em;
-    margin-left: 0.5em;
-    cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 6em;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+  cursor: pointer;
+  margin-top: 10%;
 }
 
-
 .result {
-    margin-top: 8em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  position: relative;
+top: 100px;
+  
 }
 
 .result p {
-    margin-right: 6em;
+  margin-right: 6em;
 }
 
 .result button {
-    border: solid 3px red;
-    background-color: transparent;
-    font-family: "Kanit", sans-serif;
-    border-radius: 5px;
-    width: 100px;
-    cursor: pointer;
+  border: solid 3px red;
+  background-color: transparent;
+  font-family: "ADLaM Display", cursive;
+  border-radius: 5px;
+  width: 100px;
+  cursor: pointer;
+  font-size: 25px;
 }
 
-footer h1{
-    font-family: "Tilt Prism", cursive;
-    color: rgb(255, 0, 21);
-    text-align: center;
-    margin-top: 2em;
+footer h1 {
+  font-family: "Tilt Prism", cursive;
+  color: rgb(255, 0, 21);
+  text-align: center;
+  margin-top: 0.5em;
+  font-size: 25px;
+}
+
+#movesDisplay {
+  font-size:  40px;
+  margin-top: 70px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 974px) {
+
+  header h1 {
+    font-size: 3em;
+  }
+  .moves {
+    font-size:5em ;
+  }
+  .result {
+    font-size: 20px;
+    top: 120px;
+  }
+  .result button {
+    font-size: 20px;
+    
+  }
+}
+
+@media only screen and (max-width:818px) {
+  header h1 {
+    font-size: 2.5em;
+  }
+  .moves {
+    font-size:4.5em ;
+    margin-top: 90px;
+  }
+  .result {
+    font-size: 20px;
+    top: 200px;
+  }
+
+.container {
+  height: 100vh;
+}
+}
+@media only screen and (max-width:734px) {
+
+  .moves {
+    font-size:5em ;
+    margin-top: 90px;
+  }
+.container {
+  height: 110vh;
+}
+.result {
+  top:190px;
+}
+}
+
+@media only screen and (max-width:528px) {
+  header h1 {
+    font-size: 1%;
+  }
+  .moves {
+    font-size:4em ;
+    margin-top: 90px;
+  }
+
+  .result {
+    display:block;
+    top: 200px;
+
+  }
+  .result p {
+    margin-top: 10px;
+  }
+
+  .result button {
+    margin-top: 10px;
+  }
+
+  
 }

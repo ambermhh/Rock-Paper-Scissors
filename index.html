@@ -6,32 +6,27 @@
     <title>Rock-Paper-Scissors</title>
     <link rel="stylesheet" href="Styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kanit&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="reset.css" />
   </head>
   <body>
     <div class="container">
       <header>
         <h1>Rock-Paper-Scissors Game</h1>
       </header>
-      <h3>Let's Pick A Move</h3>
+      <h3 class="let">Let's Pick A Move</h3>
       <section class="choose">
-        <button class="moves">🖐🏻</button>
-        <button class="moves">✌🏻</button>
-        <button class="moves">✊🏻</button>
+        <button class="moves" onclick="
+          playGame('🖐🏻')">🖐🏻</button>
+        <button class="moves" onclick="
+          playGame('✌🏻')">✌🏻</button>
+        <button class="moves" onclick="
+          playGame('✊🏻')">✊🏻</button>
       </section>
+      <p id="movesDisplay"></p>
       <section class="result">
-        <p>Win:</p>
-        <p>Lose:</p>
+        <p id="wins">Wins:</p>
+        <p id="losses">Losses:</p>
+        <p id="ties">Ties:</p>
         <button>Reset</button>
       </section>
     </div>
