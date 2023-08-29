@@ -9,7 +9,7 @@ function pickComputerMove() {
 
   if (randomNumber >= 0 && randomNumber <= 1 / 3) {
     computerMove = "✊🏻";
-  } else if (randomNumber >= 1 / 3 && randomNumber <= 2 / 3) {
+  } else if (randomNumber > 1 / 3 && randomNumber <= 2 / 3) {
     computerMove = "🖐🏻";
   } else {
     computerMove = "✌🏻";
@@ -17,10 +17,10 @@ function pickComputerMove() {
   return computerMove;
 }
 
-let result = "";
 
 function playGame(playerMove) {
   const computerMove = pickComputerMove();
+  let result = "";
 
   if (playerMove === "✌🏻") {
     if (computerMove === "✊🏻") {
@@ -30,8 +30,7 @@ function playGame(playerMove) {
     } else if (computerMove === "✌🏻") {
       result = "Tie";
     }
-  }
-  if (playerMove === "✊🏻") {
+  }else if (playerMove === "✊🏻") {
     if (computerMove === "✊🏻") {
       result = "Tie";
     } else if (computerMove === "🖐🏻") {
@@ -39,18 +38,16 @@ function playGame(playerMove) {
     } else if (computerMove === "✌🏻") {
       result = "You Win";
     }
-  }
-
-  if (playerMove === "Paper") {
-    if (computerMove === "Rock") {
+  }else if (playerMove === "🖐🏻") {
+    if (computerMove === "✊🏻") {
       result = "You Win";
-    } else if (computerMove === "Paper") {
+    } else if (computerMove === "🖐🏻") {
       result = "Tie";
-    } else if (computerMove === "Scssiors") {
+    } else if (computerMove === "✌🏻") {
       result = "You Lose";
     }
   }
-
+  
   if (result === "You Win") {
     score.wins += 1;
   } else if (result === "You Lose") {
@@ -65,5 +62,16 @@ function playGame(playerMove) {
   document.getElementById('ties').textContent = `Ties: ${score.ties}`;
 }
 
+function resetGame() {
+  score.wins = 0;
+  score.losses = 0;
+  score.ties = 0;
+  document.getElementById('wins').textContent = `Wins: ${score.wins}`;
+  document.getElementById('losses').textContent = `Losses: ${score.losses}`;
+  document.getElementById('ties').textContent = `Ties: ${score.ties}`;
+}
 
+
+const resetButton = document.getElementById('resetButton');
+resetButton.addEventListener('click', resetGame);
 
