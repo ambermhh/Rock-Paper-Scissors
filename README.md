@@ -1,2 +1,2 @@
 # Rock-Paper-Scissors Game
-ambermhh.github.io/index.html
+https://ambermhh.github.io/Rock-Paper-Scissors/index.html
